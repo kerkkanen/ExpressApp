@@ -8,10 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu:latest
-  
-  publish-docker-hub:
-    name: Publish image to Docker Hub
-    runs-on: ubuntu:latest
     steps:
       # Checkout repository
       - uses: actions/checkout@v3
