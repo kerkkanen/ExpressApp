@@ -5,6 +5,7 @@ services:
     image: victoriousglorious/expressapp:latest
     ports:
       - 8080:8080
+    container_name: expressapp
 
   watchtower:
     image: containrrr/watchtower
@@ -13,4 +14,4 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     container_name: watchtower
-    command: victoriousglorious/expressapp:latest
+    command: expressapp
