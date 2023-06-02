@@ -2,14 +2,15 @@ version: '3.8'
 
 services:
   express:
-    image: expressapp:latest
+    image: victoriousglorious/expressapp:latest
     ports:
       - 8080:8080
+
   watchtower:
     image: containrrr/watchtower
     environment:
-      - WATCHTOWER_POLL_INTERVAL=20
+      -  WATCHTOWER_POLL_INTERVAL=20
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     container_name: watchtower
-    command: expressapp:latest
+    command: victoriousglorious/expressapp:latest
